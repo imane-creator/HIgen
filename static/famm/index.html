@@ -20,6 +20,38 @@
       <link href="css/style.css" rel="stylesheet" />
       <!-- responsive style -->
       <link href="css/responsive.css" rel="stylesheet" />
+   
+      <!-- <script>
+         const paragraph = document.getElementById('editable-paragraph');
+         const saveButton = document.getElementById('save-button');
+         const statusMessage = document.getElementById('status-message');
+     
+         saveButton.addEventListener('click', () => {
+             const updatedContent = paragraph.innerText;
+     
+             // Exemple d'envoi des données au backend avec fetch
+             fetch('/save-paragraph/', {
+                 method: 'POST',
+                 headers: {
+                     'Content-Type': 'application/json',
+                     'X-CSRFToken': '{{ csrf_token }}', // Ajoutez le CSRF token dans un projet Django
+                 },
+                 body: JSON.stringify({ content: updatedContent }),
+             })
+             .then(response => {
+                 if (response.ok) {
+                     statusMessage.textContent = "Paragraphe sauvegardé avec succès !";
+                 } else {
+                     statusMessage.textContent = "Erreur lors de la sauvegarde.";
+                 }
+             })
+             .catch(error => {
+                 statusMessage.textContent = "Une erreur est survenue.";
+                 console.error(error);
+             });
+         });
+     </script> -->
+     
    </head>
    <body>
       <div class="hero_area">
@@ -141,6 +173,15 @@
                                  <p>
                                     Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
                                  </p>
+
+                                 <!--  -->
+                                 <!-- <p id="editable-paragraph" contenteditable="true" class="border border-gray-300 p-4 rounded bg-gray-100">
+                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                </p>
+                                <button id="save-button" class="mt-2 p-2 bg-blue-500 text-white rounded">Sauvegarder</button>
+                                <div id="status-message" class="text-sm text-green-500 mt-2"></div> -->
+
+                                <!--  -->
                                  <div class="btn-box">
                                     <a href="" class="btn1">
                                     Shop Now
